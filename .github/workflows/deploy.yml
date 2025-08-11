@@ -21,12 +21,11 @@ jobs:
       - name: Install deps
         working-directory: web
         run: npm i
-      - name: Build
-        working-directory: web
-        env:
-          # If your site will be served at https://<user>.github.io/<repo>/ set this:
-          VITE_BASE: "/<your-repo-name>/"
-        run: npm run build
+     - name: Build
+  working-directory: web
+  env:
+    VITE_BASE: "/light_blue/"
+  run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
